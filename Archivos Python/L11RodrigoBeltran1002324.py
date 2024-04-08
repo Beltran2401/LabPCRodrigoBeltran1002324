@@ -53,8 +53,8 @@ for xB in range(1, n2 + 1):
 print("El resultado de B es: ", calculoB)
 
 #Problema C
+resultado_preguntaNum = int(input("\n¿Desea utilizar el último número ingresado como 'n' para la sumatoria? 1 = Sí/ 0 = No -> "))
 while True:
-    resultado_preguntaNum = int(input("\n¿Desea utilizar el último número ingresado como 'n' para la sumatoria? 1 = Sí/ 0 = No -> "))
 
     if(resultado_preguntaNum == 1):
         n3 = n2
@@ -63,9 +63,12 @@ while True:
         break
     elif(resultado_preguntaNum == 0): 
         n3 = int(input("\nIngrese el valor de 'n' para realizar la sumatoria -> "))
-        x = int(input("Ingrese el valor de 'x' para realizar la Sumatoria -> "))
-        a = int(input("Ingrese el valor de 'a' para realizar la Sumatoria -> "))
-        break
+        if(n3 > 0): 
+            x = int(input("Ingrese el valor de 'x' para realizar la Sumatoria -> "))
+            a = int(input("Ingrese el valor de 'a' para realizar la Sumatoria -> "))
+            break
+        else: 
+            print("Ingrese un número positivo. Error.")
     else: 
         print("Error. Ingrese una opción válida.")
 
